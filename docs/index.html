@@ -89,18 +89,26 @@
 				<pre><code>npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save ng2-loading-animate</span>
 </code></pre><p>Then use it in your app like so:</p>
 				<p>app.component.ts</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateModule, LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate/ng2-loading-animate'</span>;
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateModule, LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate'</span>;
 
 @NgModule({
-  imports: [LoadingAnimateModule],
-  providers: [LoadingAnimateService]
+  imports: [
+    ...
+    LoadingAnimateModule.forRoot()
+    ...
+    ],
+  providers: [
+    ...
+    LoadingAnimateService
+    ...
+    ]
 })
 </code></pre>
 				<p>Add directives to your app.component.html (usually at top):</p>
 				<pre><code class="lang-html5">&lt;loading-animate&gt;&lt;/loading-animate&gt;
 </code></pre>
 				<p>In component, to start loading animate:</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate/ng2-loading-animate'</span>;
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate'</span>;
 
 <span class="hljs-keyword">constructor</span>(private _loadingSvc: LoadingAnimateService)
 
