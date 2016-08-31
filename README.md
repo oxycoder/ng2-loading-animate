@@ -33,11 +33,19 @@ Then use it in your app like so:
 app.component.ts
 
 ```typescript
-import { LoadingAnimateModule, LoadingAnimateService } from 'ng2-loading-animate/ng2-loading-animate';
+import { LoadingAnimateModule, LoadingAnimateService } from 'ng2-loading-animate';
 
 @NgModule({
-  imports: [LoadingAnimateModule],
-  providers: [LoadingAnimateService]
+  imports: [
+    ...
+    LoadingAnimateModule.forRoot()
+    ...
+    ],
+  providers: [
+    ...
+    LoadingAnimateService
+    ...
+    ]
 })
 ```
 
@@ -50,7 +58,7 @@ Add directives to your app.component.html (usually at top):
 In component, to start loading animate:
 
 ```typescript
-import { LoadingAnimateService } from 'ng2-loading-animate/ng2-loading-animate';
+import { LoadingAnimateService } from 'ng2-loading-animate';
 
 constructor(private _loadingSvc: LoadingAnimateService)
 
