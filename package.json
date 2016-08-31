@@ -1,6 +1,6 @@
 {
   "name": "ng2-loading-animate",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Loading animation for angular 2",
   "main": "./ng2-loading-animate.js",
   "typings": "./ng2-loading-animate.d.ts",
@@ -84,7 +84,8 @@
     "ng2-loading-animate.js",
     "ng2-loading-animate.js.map",
     "ng2-loading-animate.d.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/**/*.ts"
   ],
   "config": {
     "ghooks": {
