@@ -13,7 +13,6 @@ https://oxycoder.github.io/ng2-loading-animate/demo/
 
 - [About](#about)
 - [Installation](#installation)
-- [Documentation](#documentation)
 - [Development](#development)
 - [License](#licence)
 
@@ -30,20 +29,15 @@ npm install --save ng2-loading-animate
 
 Then use it in your app like so:
 
-app.component.ts
+app.module.ts
 
 ```typescript
-import { LoadingAnimateModule, LoadingAnimateService } from 'ng2-loading-animate';
+import { LoadingAnimateModule } from 'ng2-loading-animate';
 
 @NgModule({
   imports: [
     ...
     LoadingAnimateModule.forRoot()
-    ...
-    ],
-  providers: [
-    ...
-    LoadingAnimateService
     ...
     ]
 })
@@ -55,7 +49,23 @@ Add directives to your app.component.html (usually at top):
 <loading-animate></loading-animate>
 ```
 
+Create provider for service
+
+test.module.ts
+```typescript
+import { LoadingAnimateService } from 'ng2-loading-animate';
+
+@NgModule({
+  providers: [
+    ...
+    LoadingAnimateService
+    ...
+    ]
+})
+```
+
 In component, to start loading animate:
+test.component.ts
 
 ```typescript
 import { LoadingAnimateService } from 'ng2-loading-animate';
@@ -73,10 +83,6 @@ stop() {
 You may also find it useful to view the [demo source](https://github.com/oxycoder/ng2-loading-animate/blob/master/demo/demo.ts).
 
 
-## Documentation
-All documentation is auto-generated from the source via typedoc and can be viewed here:
-https://oxycoder.github.io/ng2-loading-animate/docs/
-
 ## Development
 
 ### Prepare your environment
@@ -88,12 +94,6 @@ Run `npm start` to start a development server on port 8000 with auto reload + te
 
 ### Testing
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
-
-### Release
-* Bump the version in package.json (once the module hits 1.0 this will become automatic)
-```bash
-npm run release
-```
 
 ## License
 
