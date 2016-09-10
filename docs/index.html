@@ -78,7 +78,6 @@
 				<ul>
 					<li><a href="#about">About</a></li>
 					<li><a href="#installation">Installation</a></li>
-					<li><a href="#documentation">Documentation</a></li>
 					<li><a href="#development">Development</a></li>
 					<li><a href="#licence">License</a></li>
 				</ul>
@@ -88,7 +87,7 @@
 				<p>Install through npm:</p>
 				<pre><code>npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save ng2-loading-animate</span>
 </code></pre><p>Then use it in your app like so:</p>
-				<p>app.component.ts</p>
+				<p>app.module.ts</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateModule, LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate'</span>;
 
 @NgModule({
@@ -96,18 +95,19 @@
     ...
     LoadingAnimateModule.forRoot()
     ...
-    ],
+  ],
   providers: [
     ...
     LoadingAnimateService
     ...
-    ]
+  ]
 })
 </code></pre>
 				<p>Add directives to your app.component.html (usually at top):</p>
 				<pre><code class="lang-html5">&lt;loading-animate&gt;&lt;/loading-animate&gt;
 </code></pre>
-				<p>In component, to start loading animate:</p>
+				<p>In component, to start loading animate:
+				test.component.ts</p>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { LoadingAnimateService } from <span class="hljs-string">'ng2-loading-animate'</span>;
 
 <span class="hljs-keyword">constructor</span>(private _loadingSvc: LoadingAnimateService)
@@ -119,10 +119,6 @@ stop() {
   <span class="hljs-keyword">this</span>._loadingSvc.setValue(<span class="hljs-literal">false</span>);
 }
 </code></pre>
-				<p>You may also find it useful to view the <a href="https://github.com/oxycoder/ng2-loading-animate/blob/master/demo/demo.ts">demo source</a>.</p>
-				<h2 id="documentation">Documentation</h2>
-				<p>All documentation is auto-generated from the source via typedoc and can be viewed here:
-				<a href="https://oxycoder.github.io/ng2-loading-animate/docs/">https://oxycoder.github.io/ng2-loading-animate/docs/</a></p>
 				<h2 id="development">Development</h2>
 				<h3 id="prepare-your-environment">Prepare your environment</h3>
 				<ul>
@@ -133,12 +129,6 @@ stop() {
 				<p>Run <code>npm start</code> to start a development server on port 8000 with auto reload + tests. </p>
 				<h3 id="testing">Testing</h3>
 				<p>Run <code>npm test</code> to run tests once or <code>npm run test:watch</code> to continually run tests.</p>
-				<h3 id="release">Release</h3>
-				<ul>
-					<li>Bump the version in package.json (once the module hits 1.0 this will become automatic)<pre><code class="lang-bash">npm run release
-</code></pre>
-					</li>
-				</ul>
 				<h2 id="license">License</h2>
 				<p>MIT</p>
 			</div>
