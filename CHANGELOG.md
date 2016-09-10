@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.12"></a>
+## [0.0.12](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.11...v0.0.12) (2016-09-10)
+
+
+### Bug Fixes
+
+* **none:** upgrade package.json version ([b677342](https://github.com/oxycoder/ng2-loading-animate/commit/b677342))
+
+
+### Features
+
+* **core:** implement angular2 animation ([96d5ead](https://github.com/oxycoder/ng2-loading-animate/commit/96d5ead))
+
+
+
 <a name="0.0.11"></a>
 ## [0.0.11](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.10...v0.0.11) (2016-08-31)
 
