@@ -1,10 +1,10 @@
-import { Component, Optional, OnInit, Input } from '@angular/core';
+import { Component, Optional, OnInit, Input, trigger, state, style, transition, animate } from '@angular/core';
 import { LoadingAnimateService } from './ng2-loading-animate.service';
 
 @Component({
     selector: 'loading-animate',
     template: `
-        <div class="loader" [ngClass]="{ hidden: !isLoading }">
+        <div class="loader" [@loadingState]="loadingState">
             <div class="loading">
                 <div class="loading-inner">
                     <div class="sk-cube-grid">
@@ -118,17 +118,33 @@ import { LoadingAnimateService } from './ng2-loading-animate.service';
                 transform: scale3D(0, 0, 1);
             }
         }
-    `]
+    `],
+    animations: [
+        trigger('loadingState', [
+            state( 'inactive', style({
+                opacity: 0,
+                display: 'none'
+            })),
+            state('active',   style({
+                opacity: 1,
+            })),
+            transition('active => inactive', animate('200ms ease-out')),
+            transition('inactive => active', animate('200ms ease-in'))
+        ])
+    ]
 })
 export class LoadingAnimateComponent implements OnInit {
 
     @Input() isLoading: boolean = false;
+    loadingState: string = 'inactive';
 
     constructor(@Optional() private _loadingSvc: LoadingAnimateService) {}
 
     ngOnInit(): void {
         this._loadingSvc.getValue().subscribe( (status: boolean) => {
             this.isLoading = status;
+            this.loadingState = status ? 'active' : 'inactive';
+            console.log(this.loadingState);
         });
     }
 }
