@@ -1,4 +1,4 @@
-import { Component, Optional, OnInit, Input, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, Optional, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { LoadingAnimateService } from './ng2-loading-animate.service';
 
 @Component({
@@ -128,7 +128,7 @@ import { LoadingAnimateService } from './ng2-loading-animate.service';
                 opacity: 1,
             })),
             transition('active => inactive', animate('200ms ease-out')),
-            transition('inactive => active', animate('200ms ease-in'))
+            transition('inactive => active', animate('0ms ease-in'))
         ])
     ]
 })
