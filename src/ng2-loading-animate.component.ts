@@ -18,7 +18,6 @@ import { LoadingAnimateService } from './ng2-loading-animate.service';
                         <div class="sk-cube sk-cube8"></div>
                         <div class="sk-cube sk-cube9"></div>
                     </div>
-                    <small>LOADING</small>
                 </div>
             </div>
         </div>
@@ -135,16 +134,13 @@ import { LoadingAnimateService } from './ng2-loading-animate.service';
 })
 export class LoadingAnimateComponent implements OnInit {
 
-    @Input() isLoading: boolean = false;
     loadingState: string = 'inactive';
 
     constructor(@Optional() private _loadingSvc: LoadingAnimateService) {}
 
     ngOnInit(): void {
         this._loadingSvc.getValue().subscribe( (status: boolean) => {
-            this.isLoading = status;
             this.loadingState = status ? 'active' : 'inactive';
-            console.log(this.loadingState);
         });
     }
 }
