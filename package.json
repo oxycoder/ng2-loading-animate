@@ -1,6 +1,6 @@
 {
   "name": "ng2-loading-animate",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Loading animation for angular 2",
   "main": "./ng2-loading-animate.js",
   "typings": "./ng2-loading-animate.d.ts",
@@ -35,11 +35,11 @@
   },
   "homepage": "https://github.com/oxycoder/ng2-loading-animate#readme",
   "devDependencies": {
-    "@angular/common": "2.0.0-rc.5",
-    "@angular/compiler": "2.0.0-rc.5",
-    "@angular/core": "2.0.0-rc.5",
-    "@angular/platform-browser": "2.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/common": "^2.0.0-rc.5",
+    "@angular/compiler": "^2.0.0-rc.5",
+    "@angular/core": "^2.0.0-rc.5",
+    "@angular/platform-browser": "^2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.5",
     "chai": "~3.5.0",
     "commitizen": "~2.8.1",
     "concurrently": "~2.2.0",
@@ -78,7 +78,7 @@
     "zone.js": "~0.6.12"
   },
   "peerDependencies": {
-    "@angular/core": "2.0.0-rc.5"
+    "@angular/core": "^2.0.0-rc.5"
   },
   "files": [
     "ng2-loading-animate.js",

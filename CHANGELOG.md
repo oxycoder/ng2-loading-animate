@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15"></a>
+## [0.0.15](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.14...v0.0.15) (2016-09-14)
+
+
+### Bug Fixes
+
+* **Fix npm packages:** Fix npm peer dependencies ([a057de9](https://github.com/oxycoder/ng2-loading-animate/commit/a057de9))
+
+
+
 <a name="0.0.14"></a>
 ## [0.0.14](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.13...v0.0.14) (2016-09-10)
 
