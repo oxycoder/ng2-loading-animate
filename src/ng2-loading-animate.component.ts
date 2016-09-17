@@ -1,4 +1,4 @@
-import { Component, Optional, OnInit, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { LoadingAnimateService } from './ng2-loading-animate.service';
 
 @Component({
@@ -136,7 +136,7 @@ export class LoadingAnimateComponent implements OnInit {
 
     loadingState: string = 'inactive';
 
-    constructor(@Optional() private _loadingSvc: LoadingAnimateService) {}
+    constructor(private _loadingSvc: LoadingAnimateService) {}
 
     ngOnInit(): void {
         this._loadingSvc.getValue().subscribe( (status: boolean) => {
