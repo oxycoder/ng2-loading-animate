@@ -1,1 +1,1 @@
-export * from './src/ng2-loading-animate.module.ts';
+export * from './src/ng2-loading-animate.module';
