@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.16"></a>
+## [0.0.16](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.15...v0.0.16) (2016-09-17)
+
+
+### Bug Fixes
+
+* Agnular2 2.0.0 Final ([b1b8592](https://github.com/oxycoder/ng2-loading-animate/commit/b1b8592))
+
+
+
 <a name="0.0.15"></a>
 ## [0.0.15](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.14...v0.0.15) (2016-09-14)
 
