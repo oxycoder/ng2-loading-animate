@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file. See [standa
 ## [0.0.17](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.16...v0.0.17) (2017-06-03)
 
 
+### Bug Fixes
+
+* update angular 4 ([0c8e851](https://github.com/oxycoder/ng2-loading-animate/commit/0c8e851))
+
+
+
+<a name="0.0.17"></a>
+## [0.0.17](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.16...v0.0.17) (2017-06-03)
+
+
 
 <a name="0.0.17"></a>
 ## [0.0.17](https://github.com/oxycoder/ng2-loading-animate/compare/v0.0.16...v0.0.17) (2017-06-03)
