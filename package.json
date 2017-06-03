@@ -1,6 +1,6 @@
 {
   "name": "ng2-loading-animate",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Loading animation for angular 2",
   "main": "./ng2-loading-animate.js",
   "typings": "./ng2-loading-animate.d.ts",
@@ -19,7 +19,8 @@
     "gh-pages": "git checkout gh-pages && git merge master && npm run build:demo && npm run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
     "prerelease": "npm test",
     "release": "standard-version --first-release && git push --follow-tags origin master && npm run build:dist && npm publish",
-    "postrelease": "npm run clean && npm run gh-pages"
+    "postrelease": "npm run clean && npm run gh-pages",
+    "precommit": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -35,11 +36,12 @@
   },
   "homepage": "https://github.com/oxycoder/ng2-loading-animate#readme",
   "devDependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/animations": "^4.1.3",
+    "@angular/common": "^4.1.3",
+    "@angular/compiler": "^4.1.3",
+    "@angular/core": "^4.1.3",
+    "@angular/platform-browser": "^4.1.3",
+    "@angular/platform-browser-dynamic": "^4.1.3",
     "chai": "~3.5.0",
     "commitizen": "~2.8.1",
     "concurrently": "~2.2.0",
@@ -48,18 +50,18 @@
     "core-js": "~2.4.1",
     "cz-conventional-changelog": "~1.2.0",
     "del-cli": "~0.2.0",
-    "ghooks": "~1.3.2",
+    "husky": "^0.13.4",
     "imports-loader": "~0.6.5",
     "jasmine-core": "~2.5.0",
     "karma": "~1.3.0",
-    "karma-coverage": "~1.1.0",
-    "karma-jasmine": "~1.0.2",
+    "karma-coverage": "~1.1.1",
+    "karma-jasmine": "~1.1.0",
     "karma-phantomjs-launcher": "~1.0.0",
     "karma-remap-istanbul": "~0.2.1",
     "karma-sourcemap-loader": "~0.3.7",
     "karma-webpack": "~1.8.0",
     "phantomjs-prebuilt": "~2.1.7",
-    "rxjs": "5.0.0-beta.12",
+    "rxjs": "^5.2.0",
     "sinon": "~1.17.4",
     "sinon-chai": "~2.8.0",
     "sourcemap-istanbul-instrumenter-loader": "~0.2.0",
@@ -73,10 +75,10 @@
     "validate-commit-msg": "~2.8.0",
     "webpack": "~1.13.0",
     "webpack-dev-server": "~1.15.0",
-    "zone.js": "~0.6.23"
+    "zone.js": "^0.8.7"
   },
   "peerDependencies": {
-    "@angular/core": "^2.0.0"
+    "@angular/core": "^4.1.3"
   },
   "files": [
     "ng2-loading-animate.js",
@@ -86,9 +88,6 @@
     "src/**/*.ts"
   ],
   "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg"
-    },
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
